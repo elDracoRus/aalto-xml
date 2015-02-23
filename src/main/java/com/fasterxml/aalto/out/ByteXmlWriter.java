@@ -1081,7 +1081,7 @@ public abstract class ByteXmlWriter
                 case CT_MULTIBYTE_2: // 3, 4 and N can never occur
                     // To off-line or not?
                     output2ByteChar(ch);
-                    break;
+                    continue main_loop;
                 case CT_RBRACKET: // may need to quote as well...
                     // Let's not quote if known not to be followed by '>'
                     if (offset >= len || cbuf[offset] == '>') {
